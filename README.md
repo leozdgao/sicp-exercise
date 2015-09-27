@@ -7,4 +7,5 @@
 - http://community.schemewiki.org/?SICP-Solutions
 - http://sicp.readthedocs.org/en/latest/
 
-我自己也参考了一些，并用Clojure做的。
+前一个是Scheme社区维护的，后一个是中文版的，不过两年没有维护了，后面几章缺失。
+两个站点都有一些有价值的评论可以学习。我自己也参考了一些，并用Clojure做的。
