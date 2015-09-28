@@ -16,8 +16,7 @@
 
 ;; 听说原版应该是平方和，这里就不改了
 
-(defn big2sumof3
-  [a b c]
+(defn big2sumof3 [a b c]
   (cond
     (and (<= a b) (<= a c)) (+ b c)
     (and (<= b a) (<= b c)) (+ a c)
