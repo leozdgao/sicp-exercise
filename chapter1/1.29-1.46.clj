@@ -31,3 +31,19 @@
 
 ;; 会报错 【java.lang.Long cannot be cast to clojure.lang.IFn】
 ;; 第一次调用(f f)，在过程体内再次调用(f 2)，导致2无法被当做一个过程调用，于是报错
+
+;; 习题*1.35*
+
+(defn fixed-point [f first-guess]
+  (defn close-enough? [a b]
+    (< (abs (- a b)) 0.0001))
+  (defn try-iter [guess]
+    (let [next (f guess)]
+      (if (close-enough? guess next)
+          next
+          (try-iter next))))
+  (try-iter first-guess))
+
+;; 计算黄金分割值
+(fixed-point (fn [x] (+ 1 (/ 1 x)))
+                 1.0)

@@ -60,7 +60,7 @@
      (* guess 0.0001)))
 
 (defn sqrt-improve [guess x]
-  (/ (+ guess (/ x guess)) 2)
+  (/ (+ guess (/ x guess)) 2))
 
 (defn cbrt-improve [guess x]
   (/ (+ (/ x (* guess guess))
